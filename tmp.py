@@ -14,9 +14,10 @@ stocks = nd_stocks + sp_stocks + dow_stocks
 
 import csv
 
-# ...
+# ..
 
 with open('stocks.csv', 'w', newline='') as file:
-    writer = csv.writer(file)
+    writer = csv.writer(file, delimiter=',', quoting=1)
     writer.writerow(["name", "symbol"])  # Writing headers
     writer.writerows(stocks)
+
