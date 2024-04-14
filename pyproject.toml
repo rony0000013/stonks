@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "stonks"
+version = "0.1.0"
+description = ""
+authors = ["Rounak Sen <103501472+rony0000013@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+streamlit = "^1.33.0"
+streamlit-audiorecorder = "^0.0.4"
+pytickersymbols = "^1.15.0"
+pyyaml = "^6.0.1"
+pandas = "^2.2.2"
+fuzzywuzzy = {extras = ["speedup"], version = "^0.18.0"}
+faker = "^24.9.0"
+plotly = "^5.20.0"
+kaleido = "v0.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
