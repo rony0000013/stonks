@@ -1,16 +1,12 @@
 import streamlit as st
-import csv, requests
+import csv, requests, json
 from datetime import date
 from audiorecorder import audiorecorder
 from fuzzywuzzy import process
 import plotly.graph_objects as go
 
 url = st.secrets["url"]
-stocks = {}
-with open("stocks.csv", "r") as file:
-    reader = csv.DictReader(file)
-    for row in reader:
-        stocks[row["name"] + " (" + row["symbol"] + ")"] = row["symbol"]
+stocks = json.load(open("stocks.json"))
 
 st.session_state["ticker"] = None
 st.session_state["news"] = None
